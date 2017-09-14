@@ -62,7 +62,7 @@ class Home extends Component {
             <div id="fb_icon">SIGN IN</div>
           </div></Link>
         </div>
-        <div id="graphs">GRAPHS</div>
+        <Link to='/graphs' style={{textDecoration: 'none', color: 'white'}}><div id="graphs">GRAPHS</div></Link>
       </div>
     );
   }
