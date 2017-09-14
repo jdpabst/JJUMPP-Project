@@ -10,7 +10,7 @@ export default (
     <Switch>
         
         <Route component={ Home } path='/' exact />
-        <Route component={Graphs} path='/graphs' exact />
+        <Route component={ Graphs } path='/graphs' exact />
 
     </Switch>
 )

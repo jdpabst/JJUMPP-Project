@@ -7,7 +7,7 @@ class Home extends Component {
   constructor(props){
       super(props);
       this.state = {
-
+        background: 'lime'
       };
       this.signInCallback = this.signInCallback.bind(this);
       this.login = this.login.bind(this);
@@ -28,25 +28,34 @@ class Home extends Component {
     axios.post('/auth/google/callback')
       .then((res) => { console.log(res) })
   }
-
+  componentDidMount(){
+    console.log(window.location.href)
+    function x(){
+      setTimeout(function(){
+        let arr = window.location.href.split('');
+        if(arr[arr.length - 1] === '#'){
+          console.log('redirect')
+        } else{
+          x();
+        }
+      }, 50)
+    }
+    x();
+  }
 
   render() {
+    let color = this.state.background;
     return (
       <div className="home">
-
-        {/* <div id="signinButton" style={{height: '50px', width: '150px', background: 'lime'}} onClick={ this.login }>
-          <span className="g-signin"
-            data-scope="https://www.googleapis.com/auth/plus.login"
-            data-clientid="120400538341-esucnei1nt6cpql4l19ap8dpv0m0vffg.apps.googleusercontent.com"
-            data-redirecturi="postmessage"
-            data-accesstype="offline"
-            data-cookiepolicy="single_host_origin"
-            data-callback={ this.signInCallback }>
-          </span>
+        <h1>WELCOME!</h1>
+        <div id="about_me">
+          <div id="me_pic"></div>
+          <p>Welcome to my app! Here, you can login with Google and navigate through some charts I made using the YouTube and Pinterest APIs. Enjoy!</p>
         </div>
-        <div id="result"></div> */}
-        <a href="http://localhost:8087/auth/google" rel='external'>LOGIN</a>
-
+        <div id="login_bttn">
+          <div id="fb_icon"></div>
+          <a href="http://localhost:8087/auth/google" rel='external' >LOGIN WITH GOOGLE</a>
+        </div>
       </div>
     );
   }

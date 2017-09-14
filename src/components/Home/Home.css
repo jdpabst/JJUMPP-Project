@@ -3,5 +3,45 @@
     width: 100%;
     position: relative;
 }
-
+#login_bttn{
+    height: 50px;
+    width: 170px;
+    background: #4885ed;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+#fb_icon{
+    height: 30px;
+    width: 30px;
+    background: url(https://maxcdn.icons8.com/Share/icon/p1em/Logos//google_logo1600.png) center no-repeat;
+    background-size: cover;
+    -webkit-filter: invert();
+    filter: invert();
+    position: absolute;
+    top: 8px;
+    left: 5px;
+}
+#login_bttn a{
+    position: absolute;
+    right: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+    top: 17px;
+}
+.home h1{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+}
+#me_pic{
+    background: url('./../img/me.JPG') center no-repeat;
+    background-size: cover;
+    height: 150px;
+    width: 150px;
+    margin-top: 50px;
+    margin-left: 100px;
+}
 

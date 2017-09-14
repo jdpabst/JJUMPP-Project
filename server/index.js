@@ -46,8 +46,8 @@ passport.serializeUser(function(user, done){
   done(null, user);
 });
 passport.deserializeUser(function(id,done){
-  db.find_by_id([id],function(err,user){
-    done(err,user);
+  db.find_by_id([id],function(err, user){
+    done(err, user);
   });
 });
 
@@ -61,8 +61,8 @@ app.get('/logout',function(req,res){
 
 app.get('/auth/google', passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login'] }));
 
-app.get('/auth/callback', passport.authenticate('google', { failureRedirect: '/' }), function (req, res) {
-    res.redirect('/graphs');
+app.get('/auth/callback', function(req, res){
+  res.redirect('http://localhost:8087/graphs')
 });
 
 //////////Other endpoints for the front end
