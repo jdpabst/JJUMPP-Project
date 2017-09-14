@@ -16,7 +16,7 @@ module.exports = {
     });
   },
     
-  findById: function(accessToken,refreshToken,profile, done){
+  findById: function(accessToken, refreshToken, profile, done){
     const db = app.get('db');
     console.log('hi')
     db.find_by_id([profile.id])

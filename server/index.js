@@ -41,9 +41,9 @@ passport.use(new GoogleStrategy({
     console.log(profile)
     userController.findById(accessToken,refreshToken,profile, done);
   }));
-passport.serializeUser(function(user,done){
-  console.log('serializing',user);
-  done(null,user);
+passport.serializeUser(function(user, done){
+  console.log('serializing', user);
+  done(null, user);
 });
 passport.deserializeUser(function(id,done){
   db.find_by_id([id],function(err,user){

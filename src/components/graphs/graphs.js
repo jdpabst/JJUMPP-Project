@@ -9,7 +9,6 @@ class Graphs extends Component {
     return (
       <div className="graphs">
           GRAPHS
-
       </div>
     );
   }
