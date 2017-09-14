@@ -1,26 +1,32 @@
 .login{
     height: 100vh;
     width: 100%;
-    background: #89B2A7;
+    background: url('./../img/desk.jpg') center no-repeat;
+    background-size: cover;
+    /* Photo by Andyone on Unsplash */
 }
 #login_container{
-    height: 500px;
-    width: 400px;
-    /* border: 1px solid black; */
-    border-radius: 3px;
-    box-shadow: 5px 5px 17px #515151;
+    height: 385px;
+    width: 325px;
     background: white;
+    border-radius: 3px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     top: 35px;
+}
+#login_container img{
+    height: 150px;
+    position: absolute;
+    top: 75px;
+    left: calc(50% - 160px);
 }
 #g_login_bttn{
     height: 50px;
     width: 175px;
     background: #4885ed;
     position: absolute;
-    bottom: 100px;
+    bottom: 97px;
     left: calc(50% - 87.5px);
 }
 #g_login_bttn a{

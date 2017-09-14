@@ -36,6 +36,7 @@ class Login extends Component {
     return (
       <div className="login">
         <div id="login_container">
+            <img src="https://media.tenor.com/images/658493dd24608e7bff1b502f2dda6ab3/tenor.gif"/>
           <div id="g_login_bttn">
             <div id="g_icon"></div>
             <a href="http://localhost:8087/auth/google" rel='external'>LOGIN WITH GOOGLE</a>
