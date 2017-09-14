@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import Home from './components/Home/Home.js';
 import Graphs from './components/Graphs/Graphs.js';
+import Login from './components/Login/Login.js';
 
 
 export default (
@@ -11,6 +12,7 @@ export default (
         
         <Route component={ Home } path='/' exact />
         <Route component={ Graphs } path='/graphs'/>
+        <Route component={ Login } path='/login'/>
 
     </Switch>
 )

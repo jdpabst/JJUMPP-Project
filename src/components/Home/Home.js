@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 import './Home.css';
 
 
@@ -30,10 +31,12 @@ class Home extends Component {
       .then((res) => { console.log(res) })
   }
   componentDidMount(){
-    if(this.state.login){
-      document.getElementById('graphs').style.display = 'block'
-    } else {
+    if(!this.state.login){
+      document.getElementById('home').style.display = 'block'
       document.getElementById('graphs').style.display = 'none'
+    } else{
+      document.getElementById('home').style.display = 'none'
+      document.getElementById('graphs').style.display = 'block'
     }
   }
   handleLogin(){
@@ -48,18 +51,16 @@ class Home extends Component {
   render() {
     let color = this.state.background;
     return (
-      <div className="home">
+      <div className="home" id="home">
         <div id="home_overlay"></div>
         <div id="home_container">
           <h1>HELLO!</h1>
           <div id="about_me">
-            {/* <div id="me_pic"></div> */}
-            <p>Welcome to my app! Here, you can navigate to a Google login page to checkout some charts I made using the YouTube and Pinterest APIs. Enjoy!</p>
+            <p>Welcome to my app! Here, you can login to checkout some charts I made using the YouTube and Pinterest APIs. Enjoy!</p>
           </div>
-          <div id="login_bttn">
+          <Link to='/login' style={{textDecoration: 'none', color: 'white'}}><div id="login_bttn">
             <div id="fb_icon"></div>
-            <a href="http://localhost:8087/auth/google" rel='external' onClick={this.handleLogin}>LOGIN WITH GOOGLE</a>
-          </div>
+          </div></Link>
         </div>
         <div id="graphs">I AM A GRAPH</div>
       </div>
