@@ -21,7 +21,6 @@
     width: 30px;
     background: url(https://maxcdn.icons8.com/Share/icon/p1em/Logos//google_logo1600.png) center no-repeat;
     background-size: cover;
-    -webkit-filter: invert();
     filter: invert();
     position: absolute;
     top: 10px;

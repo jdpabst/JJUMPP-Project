@@ -17,7 +17,7 @@ class Home extends Component {
     if (authResult.code) {
       axios.post('/auth/google/callback', { code: authResult.code})
       .done(function(data) {
-        // $('#signinButton').hide();
+        console.log(data);
       }); 
     } else if (authResult.error) {
       console.log('There was an error: ' + authResult.error);
@@ -29,18 +29,6 @@ class Home extends Component {
       .then((res) => { console.log(res) })
   }
   componentDidMount(){
-    console.log(window.location.href)
-    function x(){
-      setTimeout(function(){
-        let arr = window.location.href.split('');
-        if(arr[arr.length - 1] === '#'){
-          console.log('redirect')
-        } else{
-          x();
-        }
-      }, 50)
-    }
-    x();
   }
 
   render() {

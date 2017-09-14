@@ -62,7 +62,7 @@ app.get('/logout',function(req,res){
 app.get('/auth/google', passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login'] }));
 
 app.get('/auth/callback', function(req, res){
-  res.redirect('/')
+  res.redirect('/graphs')
 });
 
 //////////Other endpoints for the front end

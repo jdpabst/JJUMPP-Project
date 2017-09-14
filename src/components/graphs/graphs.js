@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './graphs.css';
+import './Graphs.css';
 
 
 class Graphs extends Component {
