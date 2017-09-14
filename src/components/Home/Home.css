@@ -1,7 +1,11 @@
 
 .home{
     width: 100%;
+    height: 100vh;
     position: relative;
+    /* Photo by Carlos Muza on Unsplash */
+     background: url('./../img/charts2.jpg') center no-repeat;
+     background-size: cover
 }
 #login_bttn{
     height: 50px;
@@ -31,17 +35,49 @@
     font-size: 11px;
     top: 17px;
 }
-.home h1{
+#home_container{
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    position: relative;
+}
+#home_overlay{
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.4;
+}
+#home_container h1{
     font-size: 50px;
     text-align: center;
-    margin-top: 50px;
 }
-#me_pic{
+#about_me{
+    height: 250px;
+    width: 645px;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 1px solid black; */
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    position: relative;
+}
+/* #me_pic{
     background: url('./../img/me.JPG') center no-repeat;
     background-size: cover;
     height: 150px;
     width: 150px;
-    margin-top: 50px;
-    margin-left: 100px;
+    position: absolute;
+    left: 20px;
+    top: calc(50% - 75px)
+} */
+#about_me p{
+    width: 400px;
+    position: absolute;
+    right: 20px;
+    top: 100px;
 }
 

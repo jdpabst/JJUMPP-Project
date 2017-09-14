@@ -47,14 +47,17 @@ class Home extends Component {
     let color = this.state.background;
     return (
       <div className="home">
-        <h1>WELCOME!</h1>
-        <div id="about_me">
-          <div id="me_pic"></div>
-          <p>Welcome to my app! Here, you can login with Google and navigate through some charts I made using the YouTube and Pinterest APIs. Enjoy!</p>
-        </div>
-        <div id="login_bttn">
-          <div id="fb_icon"></div>
-          <a href="http://localhost:8087/auth/google" rel='external' >LOGIN WITH GOOGLE</a>
+        <div id="home_container">
+          <div id="home_overlay"></div>
+          <h1>WELCOME!</h1>
+          <div id="about_me">
+            {/* <div id="me_pic"></div> */}
+            <p>Welcome to my app! Here, you can login with Google and navigate through some charts I made using the YouTube and Pinterest APIs. Enjoy!</p>
+          </div>
+          <div id="login_bttn">
+            <div id="fb_icon"></div>
+            <a href="http://localhost:8087/auth/google" rel='external' >LOGIN WITH GOOGLE</a>
+          </div>
         </div>
       </div>
     );
