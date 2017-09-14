@@ -1,8 +1,27 @@
+.login{
+    height: 100vh;
+    width: 100%;
+    background: #89B2A7;
+}
+#login_container{
+    height: 500px;
+    width: 400px;
+    /* border: 1px solid black; */
+    border-radius: 3px;
+    box-shadow: 5px 5px 17px #515151;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 35px;
+}
 #g_login_bttn{
     height: 50px;
     width: 175px;
     background: #4885ed;
-    position: relative;
+    position: absolute;
+    bottom: 100px;
+    left: calc(50% - 87.5px);
 }
 #g_login_bttn a{
     position: absolute;
