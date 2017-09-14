@@ -33,7 +33,7 @@ class Home extends Component {
   componentDidMount(){
     if(!this.state.login){
       document.getElementById('home').style.display = 'block'
-      document.getElementById('graphs').style.display = 'none'
+      // document.getElementById('graphs').style.display = 'none'
     } else{
       document.getElementById('home').style.display = 'none'
       document.getElementById('graphs').style.display = 'block'
@@ -62,7 +62,7 @@ class Home extends Component {
             <div id="fb_icon">SIGN IN</div>
           </div></Link>
         </div>
-        <div id="graphs">I AM A GRAPH</div>
+        <div id="graphs">GRAPHS</div>
       </div>
     );
   }

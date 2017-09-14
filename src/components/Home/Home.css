@@ -72,4 +72,11 @@
     word-spacing: 0.5px;
     font-family: 'Nunito', sans-serif;
 }
-
+#graphs{
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    position: absolute;
+    top: 30px;
+    right: 133px;
+}
