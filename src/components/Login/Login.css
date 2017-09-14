@@ -1,0 +1,26 @@
+#g_login_bttn{
+    height: 50px;
+    width: 175px;
+    background: #4885ed;
+    position: relative;
+}
+#g_login_bttn a{
+    position: absolute;
+    right: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+    top: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+#g_icon{
+    background: url(https://maxcdn.icons8.com/Share/icon/p1em/Logos//google_logo1600.png) center no-repeat;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    filter: invert();
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}

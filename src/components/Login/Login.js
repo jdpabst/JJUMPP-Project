@@ -36,9 +36,9 @@ class Login extends Component {
     return (
       <div className="login">
         <div id="login_container">
-          <div id="login_bttn">
-            <div id="fb_icon"></div>
-            <a href="http://localhost:8087/auth/google" rel='external' onClick={this.handleLogin}>LOGIN WITH GOOGLE</a>
+          <div id="g_login_bttn">
+            <div id="g_icon"></div>
+            <a href="http://localhost:8087/auth/google" rel='external'>LOGIN WITH GOOGLE</a>
           </div>
         </div>
       </div>
