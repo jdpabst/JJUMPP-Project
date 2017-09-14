@@ -18,12 +18,11 @@ class Graphs extends Component {
 }
 
 componentDidMount(){
-  axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&order=relevance&q=yogabycandace&type=video&key=AIzaSyD-98pdn2HMAEmroyZrC-Fye_j24121uuE`).then( videosArr => {
+  axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&order=relevance&q=yoga+by+candace&type=video&key=AIzaSyD-98pdn2HMAEmroyZrC-Fye_j24121uuE`).then(videosArr => {
       this.setState({
           videosArr: videosArr.data.items,
       })
     })
-    console.log(this.state.videosArr)
   }
   render() {
     return (
