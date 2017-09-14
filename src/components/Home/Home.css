@@ -10,21 +10,20 @@
 }
 #login_bttn{
     height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background: #6FCDAF;
+    width: 80px;
     position: absolute;
     top: 25px;
-    right: 30px;
+    right: 50px;
 }
 #fb_icon{
     height: 30px;
-    width: 30px;
+    width: 80px;
     position: absolute;
     top: calc(50% - 15px);
     left: calc(50% - 15px);
-    background: url(https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male-512.png) center no-repeat;
-    background-size: cover;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
 }
 #login_bttn a{
     position: absolute;
