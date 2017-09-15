@@ -6,6 +6,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "^1.17.2",
+    "chart.js": "^1.1.1",
     "cors": "^2.8.3",
     "express": "^4.15.3",
     "express-session": "^1.15.3",
@@ -16,8 +17,8 @@
     "passport-google-plus": "^0.5.1",
     "passport-local": "3.0.0",
     "react": "^15.6.1",
+    "react-chartjs": "^0.8.0",
     "react-dom": "^15.6.1",
-    "react-hash-router": "^0.2.0",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.1",
     "redux": "^3.7.1",
