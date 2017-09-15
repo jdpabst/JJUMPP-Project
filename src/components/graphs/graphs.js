@@ -65,7 +65,7 @@ componentDidMount(){
           <CartesianGrid strokeDasharray="3 3" />
           <Tooltip />
           <Legend />
-          <Bar dataKey="LIKES" fill="#8884d8" />
+          <Bar dataKey="LIKES" fill="#009D6E" />
         </BarChart>
       }
     return (

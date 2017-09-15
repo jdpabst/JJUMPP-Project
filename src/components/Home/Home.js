@@ -56,7 +56,7 @@ class Home extends Component {
         <div id="home_container">
           <h1>HELLO!</h1>
           <div id="about_me">
-            <p>Welcome to my app! Here, you can login to checkout some charts I made using the YouTube and Pinterest APIs. Enjoy!</p>
+            <p>Welcome to my app! Here, you can login to checkout a bar chart I created using the YouTube Data API. Enjoy!</p>
           </div>
           <Link to='/login' style={{textDecoration: 'none', color: 'white'}}><div id="login_bttn">
             <div id="fb_icon">SIGN IN</div>
