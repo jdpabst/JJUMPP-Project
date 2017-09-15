@@ -2,8 +2,14 @@
     font-size: 22px;
     width: 100%;
     text-align: center;
-    margin: 50px 0 50px 0;
+    margin: 130px 0 50px 0;
     font-family: 'Nunito', sans-serif;
+}
+.graphs h2{
+    font-size: 12px;
+    position: absolute;
+    top: 25px;
+    right: 150px;
 }
 .graphs .bar_chart{
     font-size: 10px;
@@ -21,7 +27,7 @@
     transform: rotate(90deg);
     position: absolute;
     right: 430px;
-    top: 280px;
+    top: 360px;
     background: white;
     /* display: none; */
 }

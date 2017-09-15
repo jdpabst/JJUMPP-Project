@@ -70,6 +70,7 @@ componentDidMount(){
       }
     return (
       <div className="graphs">
+          <Link to='/'><h2>HOME</h2></Link>
           <h1>YOGA BY CANDACE PLAYLIST 'LIKES' COUNT</h1>
           {/* <div>{ videos.likeCount }</div> */}
           {/* <div>{JSON.stringify(this.state.list)}</div> */}
