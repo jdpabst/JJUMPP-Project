@@ -1,6 +1,7 @@
  const LIST = 'LIST'
  const TEST = 'TEST'
  const VIDEO = 'VIDEO'
+ const LOGIN = 'LOGIN'
 
 const initialState = {
     videosArr: [
@@ -17,7 +18,8 @@ const initialState = {
         }
       }
     ],
-    list: []
+    list: [],
+    login: 'SIGN IN'
 } 
 
 export default function reducer(state = initialState, action) {
@@ -33,6 +35,10 @@ export default function reducer(state = initialState, action) {
     case VIDEO:
       return{
         videosArr:action.payload,
+      }
+    case LOGIN:
+      return{
+        login:action.payload,
       }
     default:
       return state;
@@ -57,6 +63,12 @@ export function handleVideoArr(param){
   return{
     type: VIDEO,
     payload: param
+  }
+}
+export function handleLogin(){
+  return{
+    type: LOGIN,
+    payload: 'LOGGED IN'
   }
 }
 

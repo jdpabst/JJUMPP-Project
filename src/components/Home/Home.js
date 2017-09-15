@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import { connect } from 'react-redux';
+import {handleLogin} from './../../ducks/reducer';
 import './Home.css';
 
 
@@ -12,7 +14,7 @@ class Home extends Component {
       };
       this.signInCallback = this.signInCallback.bind(this);
       this.login = this.login.bind(this);
-      this.handleLogin = this.handleLogin.bind(this);
+      // this.handleLogin = this.handleLogin.bind(this);
     }
 
   signInCallback(authResult){
@@ -31,22 +33,19 @@ class Home extends Component {
       .then((res) => { console.log(res) })
   }
   componentDidMount(){
-    if(!this.state.login){
-      document.getElementById('home').style.display = 'block'
-      // document.getElementById('graphs').style.display = 'none'
-    } else{
-      document.getElementById('home').style.display = 'none'
+    if(window.location.href.charAt(window.location.href.length - 1) === '#'){
+      this.props.handleLogin();
       document.getElementById('graphs').style.display = 'block'
     }
   }
-  handleLogin(){
-    console.log('fired')
-    if(!this.state.login){
-      this.setState({
-        login: true
-      })
-    }
-  }
+  // handleLogin(){
+  //   console.log('fired')
+  //   if(!this.state.login){
+  //     this.setState({
+  //       login: true
+  //     })
+  //   }
+  // }
 
   render() {
     let color = this.state.background;
@@ -59,7 +58,7 @@ class Home extends Component {
             <p>Welcome to my app! Here, you can login to checkout a bar chart I created using the YouTube Data API. Enjoy!</p>
           </div>
           <Link to='/login' style={{textDecoration: 'none', color: 'white'}}><div id="login_bttn">
-            <div id="fb_icon">SIGN IN</div>
+            <div id="fb_icon">{this.props.login}</div>
           </div></Link>
         </div>
         <Link to='/graphs' style={{textDecoration: 'none', color: 'white'}}><div id="graphs">GRAPHS</div></Link>
@@ -69,4 +68,10 @@ class Home extends Component {
 }
 
 
-export default Home;
+function mapStateToProps(state){
+  return {
+      login: state.login
+  }
+}
+
+export default connect(mapStateToProps, { handleLogin } )(Home);
