@@ -1,25 +1,63 @@
-
- const EXAMPLE = 'EXAMPLE'
+ const LIST = 'LIST'
+ const TEST = 'TEST'
+ const VIDEO = 'VIDEO'
 
 const initialState = {
-  loading: false,
-}
+    videosArr: [
+      {
+        snippet:{
+          title: ''
+        },
+        statistics: {
+          commentCount:"",
+          dislikeCount:"",
+          favoriteCount:"",
+          likeCount:"",
+          viewCount:""
+        }
+      }
+    ],
+    list: []
+} 
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
-    case EXAMPLE:
+    case LIST:
       return {
-        loading: action.payload,
+        list:action.payload,
+      }
+    case TEST:
+      return{
+        test:action.payload,
+      }
+    case VIDEO:
+      return{
+        videosArr:action.payload,
       }
     default:
       return state;
     }
+    
 }
 
 
-export function handleSubscription(){
+export function handleList(param){
     return{
-      type: EXAMPLE,
-      payload: true
-    } 
+      type: LIST,
+      payload: param
+      }  
+    }
+export function handleTest(param){
+  return{
+    type: TEST,
+    payload: param
+  }
 }
+export function handleVideoArr(param){
+  return{
+    type: VIDEO,
+    payload: param
+  }
+}
+
+

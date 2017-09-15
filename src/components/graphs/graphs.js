@@ -23,18 +23,6 @@ class Graphs extends Component {
           }
         }
       ],
-      data: [
-        {name:"20 Minute Yoga for Back Flexibility",pv:758},
-        {name:"Pre-Run Warm Up Yoga Video - 20 Minute",pv:314},
-        {name:"20 Minute Yoga Flow for Core Strengthening",pv:1100},
-        {name:"20 Min Yoga Flow for Beginners",pv:2956},
-        {name:"20 Min Yoga for Tight Legs",pv:1037},
-        {name:"20 Minute Total Body Beginner Flow",pv:4014},
-        {name:"20 Minute Yoga with a Stability Ball",pv:919},
-        {name:"20 min vinyasa with a block",pv:227},
-        {name:"20 Min Yin Yoga",pv:287},
-        {name:"20 Minute Blindfolded Yoga Practice",pv:119}
-    ],
     list: []
   }    
 }
@@ -57,7 +45,6 @@ componentDidMount(){
     let videos = this.state.videosArr;
     let list = this.state.list;
     let chart;
-    // console.log(this.state.list);
     if(this.state.list.length >= 10){
       chart = <BarChart className="bar_chart" width={800} height={400} data={this.state.list}>
           <XAxis/>
@@ -72,8 +59,6 @@ componentDidMount(){
       <div className="graphs">
           <Link to='/' style={{textDecoration: 'none', color: 'black'}}><h2>HOME</h2></Link>
           <h1>YOGA BY CANDACE PLAYLIST 'LIKES' COUNT</h1>
-          {/* <div>{ videos.likeCount }</div> */}
-          {/* <div>{JSON.stringify(this.state.list)}</div> */}
           {chart}
           <ul id="list_list">{list.map((name, id) => {
             return <li id="list_item">{ name.name }</li>
